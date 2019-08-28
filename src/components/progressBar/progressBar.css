@@ -1,0 +1,14 @@
+.progressBar .MuiLinearProgress-root{
+	height: 20px;
+	margin-right: -1em;
+
+
+}
+.progressBar .MuiLinearProgress-root:after{
+	content: attr(aria-valuenow)'%';
+	font-size: 17px;
+	position: absolute;
+	top: 0;
+    right:0; 
+
+}

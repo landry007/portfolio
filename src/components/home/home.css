@@ -1,0 +1,148 @@
+.main{
+	display: flex;
+	flex :1;
+	align-items: center;
+	justify-content: center;
+	height: 93vh;
+	width: 100vw;
+	background: #833ab4;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container .main .main_text{
+	color: #fff;
+	font-size: 4em;
+	box-sizing: border-box;
+	text-align: center;
+
+}
+.container .main .presentation{
+	position: absolute;
+	bottom: 20px;
+	opacity: 0.5;
+	border-radius: 10px;
+	width: 80%;
+	height: 50%;
+	background: #200122;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.container .main .divider{
+	text-align: center;
+	color: #fff;
+	font-size: 18px ;
+
+}
+.container .main .lang_list span{
+	color: #fff;
+	font-size: 25px ;
+	margin: 5px;
+
+}
+.container .logo {
+	text-align: center;
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 45%;
+	
+}
+.container .logo .image{
+	background: #fff;
+	border-radius: 50%;
+
+	width: 200px;
+	height: 200px;
+	animation: turn 5s linear infinite ;
+}
+
+.container .main .lang_list{
+
+	color: #fff;
+	font-size: 18px ;
+	box-sizing: border-box;
+	text-align: center;
+
+}
+@keyframes turn{
+	0%{
+		transform: rotate3d(0,-1,0,0deg);
+	}
+	50%{
+		transform: rotate3d(0,0,0,0deg);
+	}
+	100%{
+		transform: rotate3d(0,-1,0,360deg);
+	}
+}
+.container .presentation .social_medias{
+	
+	position: absolute;
+	bottom: 0px;
+	left: 25%;
+}
+.container .presentation .social_medias img{
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	margin-left: 5em;
+	
+}
+@media (max-width: 1200px){
+	
+}
+@media (max-width: 430px){
+	body{
+		width: 100%;
+	}
+	.main{
+		width: 100vw;
+
+	}
+
+	.container .logo{
+		text-align: center;
+		position: absolute;
+		margin-top: 50px;
+		margin-left:180px;
+		
+	}
+	.container .logo .image{
+		background: #fff;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		animation: turn 5s linear infinite ;
+	}
+	.container .main .presentation{
+		position: absolute;
+		bottom: 10px;
+		opacity: 0.8;
+		border-radius: 10px;
+		width: 80%;
+		height: 40%;
+		background: #200122;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+	.container .main .main_text{
+		color: #fff;
+		font-size: 25px;
+		box-sizing: border-box;
+		text-align: center;
+		opacity: 1;
+
+	}
+	.container .main .divider{
+		text-align: center;
+		color: #fff;
+		font-size: 12px ;
+		margin-left: 8px;
+		margin-bottom: -10px;
+
+	}
+
+}
+
+

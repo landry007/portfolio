@@ -1,0 +1,21 @@
+.app_root{
+	color: #000;
+	background: #fff;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #fff, #fff, #fff);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #fff, #fff, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.MuiTabs-flexContainer{
+	color: #000 !important ;
+
+}
+.MuiTabs-scroller .MuiTabs-flexContainer  {
+	margin-top: 120;
+	text-align: center;
+}
+.MuiTabs-scroller .MuiTabs-flexContainer button .MuiTab-wrapper{
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1;
+	text-align: center;
+}

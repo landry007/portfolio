@@ -1,0 +1,46 @@
+.app_bar{
+	background: #833ab4;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.main_path{
+
+	flex :1;
+	text-decoration: none;
+	color: #fff ;
+	font-size: 22px;
+	justify-content: center;
+	align-items: center;
+
+}
+.b_button{
+	flex :1 -1;
+	margin-left: 27px;
+	text-decoration: none;
+	color: #fff ;
+	font-size: 17px;
+	justify-content: center;
+	align-items: center;
+}
+.b_button:after{
+	content: '  /';
+	font-size: 20;
+	font-weight: bold;
+	margin-left: 5px;
+
+}
+.nav_group{
+	display: flex;
+	flex :1;
+	align-content: center;
+	align-items: center;
+	flex-grow: 12px;
+
+}
+
+@media (max-width: 1260px){
+	.nav_group{
+		display: none !important;
+	}
+}

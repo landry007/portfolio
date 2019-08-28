@@ -1,0 +1,336 @@
+.about-container{
+	overflow-x: hidden;
+	background: #fff;
+
+	
+}
+.about-container .presentation{
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 50vh;
+	line-height: 0.3;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+
+
+}
+.about-container .presentation .about-flash{
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	opacity: 0;
+	margin-right: 25px;
+	background: #ffff;
+	animation:  flash 25s linear 1 ;
+	animation-delay: 0s;
+}
+@keyframes flash{
+	to{
+		left: 78%;
+		z-index: 1;
+		opacity: 1;
+
+
+	}
+	from{
+		left: 10%;
+		z-index: -1;
+		opacity: 1;
+	}
+}
+.about-container .presentation a{
+	list-style: none;
+	text-decoration: none;
+
+}
+.about-container .presentation span{
+	color: #f71e24 ;
+	z-index: 5;
+}
+.about-container .presentation p{
+	color: blue;
+}
+
+.about-container .presentation .about-button{
+	color: #f71e24 ;
+}
+.about-container .presentation .MuiButton-label {
+    width: 100%;
+    border: 2px solid darkblue;
+    margin: 0px;
+    padding: 18px;
+
+}
+.about-container .about-description {
+	margin: 1%;
+}
+.about-container .about-description p{
+	font-size: 1.5em;
+}
+
+.about-container .about-work h3{
+	text-align: center;
+	font-size: 1.5rem;
+	color: #fff;
+	letter-spacing: 2.5px;
+	opacity: .8;
+	
+}
+
+
+.about-container .about-work{
+	height: 65vh;
+	background: #833ab4;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	
+}
+.about-container .about-work .work-description{
+
+	display: grid;
+	grid-template-columns: repeat(5,1fr);
+	grid-gap: 3px;
+	grid-template-rows: 1fr 1fr ;
+	margin: 2rem;
+
+}
+
+.about-container .about-work .work-description .work{
+
+	background: #fff;
+	display: grid;
+	grid-template-rows: 1fr 1fr ;
+}
+.about-container .about-work .work-description .work:nth-child(2n+1){
+	background: transparent;
+	color: transparent;
+
+}
+.about-container .about-work .work-description .work:nth-child(2n+1):before{
+	content: " ";
+	width: 255px;
+	height: 155px;
+	border-left: 2px dashed #fff;
+	border-bottom: 2px dashed #fff;
+	position: absolute;
+
+}
+
+.about-container .about-work .work-description .work:nth-child(2n+0):before{
+	content: "";
+	position: absolute;
+	background: inherit;
+
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	transform: translate(-41px, -34px);
+
+	z-index: 3;
+
+}
+.about-container .about-work .work-description .work:nth-child(2n+0):after{
+	content: " ";
+	position: absolute;
+	color: blue;
+	background: red;
+
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	transform: translate(-25px, -20px);
+	animation: shine 2s linear infinite ;
+
+
+	z-index: 10;
+
+}
+@keyframes shine{
+	0%{
+		filter: drop-shadow(16px 16px 20px red) invert(50%);
+		opacity: .2;
+	}
+	25%{
+		filter: drop-shadow(16px 16px 20px blue) invert(75%);
+		opacity: .4;
+	}
+	50%{
+		filter: drop-shadow(16px 16px 20px green) invert(45%);
+		width: 45px;
+		height: 45px;
+		opacity: .6;
+	}
+	100%{
+		filter: drop-shadow(16px 16px 20px pink) invert(75%);
+		width: 50px;
+		height: 50px;
+		opacity: 1;
+	}
+
+}
+.about-container .footer{
+	margin: 15px;
+
+}
+.about-container .footer h2{
+	color: green;
+	opacity: .8;
+	text-align: center;
+}
+
+.about-container .question h3{
+	color: red;
+	opacity: .8;
+}
+.about-container .question p{
+	font-size: 18px;
+	line-height: 1.5;
+	text-align: justify;
+}
+@media (min-width: 701px) AND (max-width: 1000px) {
+
+	.about-container{
+		position: absolute;
+		overflow-x: hidden;
+		background: #fff;
+		width: 100vw;
+
+	}
+	.about-container .presentation .about-flash{
+		position: absolute;
+		width: 100%;
+		height:inherit;
+		z-index: 10;
+		opacity: 0;
+		margin-right: 0;
+		margin-left: 0;
+		background: #ffff;
+		animation:  flash 25s linear 1 ;
+		animation-delay: 0s;
+	}
+
+}
+
+@media (max-width: 700px){
+	.about-container{
+		position: absolute;
+		overflow-x: hidden;
+		background: #fff;
+		width: 100vw;
+
+		
+	}
+	.about-container .presentation .about-flash{
+		position: absolute;
+		width: 100%;
+		height:inherit;
+		z-index: 10;
+		opacity: 0;
+		top: 0;
+		margin-right: 25px;
+		background: #ffff;
+		animation:  flash 25s linear 1 ;
+		animation-delay: 0s;
+	}
+   
+    .about-container .about-description {
+    	margin: 2%;
+    }
+    .about-container .about-description p{
+    	font-size: 1.2em;
+    	text-align: justify;
+    	margin: 5px;
+    }
+
+    .about-container .about-work h3{
+    	text-align: center;
+    	font-size: auto  ;
+    	color: #fff;
+    	letter-spacing: 1.5px;
+    	opacity: .8;
+    	
+    }
+    .about-container .presentation h1{
+    	z-index: 5;
+    	font-size: 15px;
+    }
+    .about-container .presentation p{
+    	color: blue;
+    }
+    .about-container .presentation span{
+    	color: #f71e24 ;
+    	z-index: 5;
+    }
+
+	.about-container .about-work{
+		width: auto;
+		height: auto;
+	}
+
+
+
+    .about-container .about-work .work-description{
+
+    	display: grid;
+    	grid-template-columns: repeat(3,1fr);
+    	grid-gap: 3px;
+    	grid-template-rows: 1fr 1fr ;
+    	margin: .5rem;
+
+    }
+
+    .about-container .about-work .work-description .work{
+
+    	background: #fff;
+    	display: grid;
+    	grid-template-rows: 1fr 1fr ;
+    }
+    .about-container .about-work .work-description .work:nth-child(2n+1){
+    	background: transparent;
+    	color: transparent;
+
+    }
+    .about-container .about-work .work-description .work:nth-child(2n+1):before{
+    	content: " ";
+    	width: 255px;
+    	height: 155px;
+    	border-left: 2px dashed #fff;
+    	border-bottom: 2px dashed #fff;
+    	position: absolute;
+
+    }
+
+    .about-container .about-work .work-description .work:nth-child(2n+0):before{
+    	content: "";
+    	position: absolute;
+    	background: inherit;
+
+    	width: 80px;
+    	height: 80px;
+    	border-radius: 50%;
+    	transform: translate(-41px, -34px);
+
+    	z-index: 3;
+
+    }
+    .about-container .about-work .work-description .work:nth-child(2n+0):after{
+    	content: " ";
+    	position: absolute;
+    	color: blue;
+    	background: red;
+
+    	width: 50px;
+    	height: 50px;
+    	border-radius: 50%;
+    	transform: translate(-25px, -20px);
+    	animation: shine 2s linear infinite ;
+
+
+    	z-index: 10;
+
+    }
+
+}
