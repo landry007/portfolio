@@ -16,8 +16,6 @@ class App extends React.Component {
   render(){
     return(
 
-      <div>
-       
             <Switch>
 
                 <Route  path="/" exact component={ Home } />
@@ -28,11 +26,6 @@ class App extends React.Component {
 
 
             </Switch >
-
-
-      </div>
-     
-
 
       )
   }

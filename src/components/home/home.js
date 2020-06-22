@@ -4,14 +4,7 @@ import "./home.css"
 import PersistentDrawerLeft  from '../header/header.js'
 
 
-
-
-
-
 class Home extends React.Component{
-
-
-
 
 	render(){
 		return(

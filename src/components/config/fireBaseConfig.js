@@ -5,7 +5,7 @@
     authDomain: "portfolio-95583.firebaseapp.com",
     databaseURL: "https://portfolio-95583.firebaseio.com",
     projectId: "portfolio-95583",
-    storageBucket: "",
+    storageBucket: "gs://portfolio-95583.appspot.com",
     messagingSenderId: "269197785153",
     appId: "1:269197785153:web:cfd86f56f59e7487"
   };

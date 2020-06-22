@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
  
 }));
 
-export default function FullWidthTabs() {
+export default function FullWidthTabs(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -47,7 +47,9 @@ export default function FullWidthTabs() {
   }
 
   return (
+    
     <div className={classes.root}>
+
       <AppBar position="static"  className="app_root">
         <Tabs
           value={value}
@@ -66,7 +68,11 @@ export default function FullWidthTabs() {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        { data.map( (title, k) =><TabContainer key = { k } dir={theme.direction}><ProjectGroup title = { title } /></TabContainer>)}
+        { data.map( (title, k) =><TabContainer key = { k } dir={theme.direction} >
+         
+           <ProjectGroup title = { title } navigation = { props.navigation } />
+         
+         </TabContainer>)}
 
 
       </SwipeableViews>

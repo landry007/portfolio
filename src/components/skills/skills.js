@@ -27,6 +27,7 @@ class Skills extends React.Component{
 		 
 
 	 }
+
 	componentDidMount(){
 
 		 db.collection('Skills').get().then( querySnapshot => {
@@ -51,67 +52,35 @@ class Skills extends React.Component{
 			   <div className="skill_container">
 			         <div className="rapid_description">
 			         	<div className="fast">
-			         		<div className="hexagone hex">
-			         			<h2>rapidite</h2>
-
-			         		</div>
-			         		<div className="hexagone hex1">
-			         			<h2>rapidite</h2>
-			         		</div>
-			         		<div className="hexagone hex2">
-			         			<h2>rapidite</h2>
-			         		</div>
+			        
+							 <img src="./images/fast_loading.png" alt="" />
 
 
-			         		<h3>rapidite</h3>
+			         		<h3>Rapidite</h3>
 			         		<p>Des temps de chargement rapides et une interaction sans décalage, ma plus haute priorité.</p>
 
 			         	</div>
 			         	<div className="responsive">
-				         	<div className="hexagone hex">
-				         		<h2>responsive</h2>
+							 <img src="./images/web_devices.png" alt="" />
+				         
 
-				         	</div>
-				         	<div className="hexagone hex1">
-				         		<h2>responsive</h2>
-				         	</div>
-				         	<div className="hexagone hex2">
-				         		<h2>responsive</h2>
-				         	</div>
-
-			         		<h3>responsive</h3>
+			         		<h3>Responsive</h3>
 			         		<p>Mes mises en page fonctionnent sur tous les appareils, grands ou petits.</p>
 
 			         	</div>
 			         	<div className="intuitive">
-				         	<div className="hexagone hex">
-				         		<h2>intuitive</h2>
+						 <img src="./images/Creation_process.png" alt="" />
+				    
 
-				         	</div>
-				         	<div className="hexagone hex1">
-				         		<h2>intuitive</h2>
-				         	</div>
-				         	<div className="hexagone hex2">
-				         		<h2>intuitive</h2>
-				         	</div>
-
-			         		<h3>intuitive</h3>
+			         		<h3>Intuitive</h3>
 			         		<p>Préférence forte pour UX / UI intuitive, facile à utiliser.</p>
 
 			         	</div>
 			         	<div className="dynamic">
 
-			         		<div className="hexagone hex">
-			         			<h2>Dynamic</h2>
-
-			         		</div>
-			         		<div className="hexagone hex1">
-			         			<h2>Dynamic</h2>
-			         		</div>
-			         		<div className="hexagone hex2">
-			         			<h2>Dynamic</h2>
-			         		</div>
-			         		<h3>dynamic</h3>
+						 <img src="./images/programming.png" alt="" />
+			    
+			         		<h3>Dynamique</h3>
 			         		<p>Les sites Web ne doivent pas nécessairement être statiques, j'aime donner vie aux pages.</p>
 
 			         	</div>

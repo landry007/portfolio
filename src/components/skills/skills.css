@@ -13,22 +13,11 @@
 	justify-content: center;
 	align-items: center;
 }
-
-
-.skill_container .rapid_description .hexagone{
-	display: flex;
-	width: 95px;
-	height: 150px;
-	background: #e52d27;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-	border-radius: 5%;
-	opacity: .5;
-	color: #fff;
-	margin-left: 95px;
-
-
+.skill_container .rapid_description img{
+	height :130px ;
+	width : 130px;
+	transform: translateX(94px);
+	background-color: inherit;
 }
 .skill_container .rapid_description .hex1 h2{
 	flex: 1;
@@ -73,24 +62,7 @@
 	transform: rotateZ(63deg);
 	animation: hex1 5s linear infinite ;
 }
-@keyframes hex1{
-	from{transform: rotateX(200deg);}
-}
-@keyframes hex2{
-	from{transform: rotateZ(-360deg);}
-}
-@keyframes hex{
-	from{transform: rotate3d(1,1,1,360deg);}
-}
-.skill_container .rapid_description .hex2{
-	position: absolute;
-	top: 68px;
-	transform: rotateZ(-63deg);
-	animation: hex2 10s linear infinite ;
-}
-.skill_container .rapid_description .hex{
-	animation: hex 10s linear infinite ;
-}
+
 .progressBar{
 	display: flex;
 	flex-direction: column;

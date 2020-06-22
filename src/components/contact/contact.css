@@ -12,5 +12,103 @@
 .contact-container .social-form{
     display: grid;
     display: -ms-grid ;
-    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.contact-container .social-form .contact-form h1{
+    text-align: center;
+}
+.contact-container .social-form .MuiInputLabel-formControl{
+    color: #fff;
+} 
+
+.contact-container .social-form .social-network{
+    margin-top: 50px;
+}
+
+
+@media screen AND (max-width: 800px ) AND (min-width: 310px) {
+
+	.contact-container{
+        width: 100vw;
+        overflow-x: hidden;
+        background: #833ab4;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+    }
+    .contact-container .social-form .contact-form h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .contact-container .social-form {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+
+    }
+    
+    .contact-container .social-form .contact-social .social_medias a img{
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        margin-top: 1em;
+        
+    }
+    .contact-container .social-form .contact-social .social_medias  {
+       
+        text-align: center;
+        
+    }
+	
+}
+
+@media screen AND (max-width: 1000px ) AND (min-width: 800px) {
+
+    .contact-container{
+        overflow-x: hidden;
+        text-align: center;
+        margin-top: 0;
+        margin-left: 80px;
+        margin-right: 0;
+        width: 100vw;
+        background: #833ab4;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+    }
+    .contact-container .social-form .contact-form h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .contact-container .social-form {
+        overflow: hidden;
+		display: grid;
+        grid-template-columns: 1fr 1fr ;
+	    grid-column-gap: 14px;
+    }
+    .contact-container .social-form .social-network{
+        grid-row-start: 3;
+    }
+
+    .contact-container .social-form .contact-social{
+        grid-row-start: 2;
+    }
+	
+}
+
+.contact-container .social-form .contact-social .social_medias img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+    margin-left: 3em;
+    margin-top: 2em;
+	
 }
