@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
@@ -16,6 +16,7 @@ import VideocamIcon from '@material-ui/icons/Videocam'
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera'
 
 import SwipeableTextMobileStepper from '../utilsComponents/caroussel'
+import './utils.css'
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -33,8 +34,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function FullScreenDialog(props) {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-  const [image, setImage] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [image, setImage] = useState(false);
 
 
   function handleClickOpen() {
@@ -62,7 +63,7 @@ export default function FullScreenDialog(props) {
             <PhotoCameraIcon />
         </IconButton>
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
-        <AppBar className={classes.appBar}>
+        <AppBar className={classes.appBar, 'appBarDialog'}>
           <Toolbar>
             <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
               <CloseIcon />
@@ -70,16 +71,15 @@ export default function FullScreenDialog(props) {
             <Typography variant="h6" className={classes.title}>
                 { props.title }
             </Typography>
-            <Button color="inherit" onClick={handleClose}>
-              save
-            </Button>
+            {/* <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
+              <CloseIcon />
+            </IconButton> */}
           </Toolbar>
         </AppBar>
         { image
         
         ? 
             <div style= { { display:'flex', flex:1,flexDirection:'column-reverse'} } >
-                <img height ="100%" width ="100%" style= { { display:'flex', flex:1 , height:90+'vh'} }  src = { props.url_image } />
                 <SwipeableTextMobileStepper 
                 array_image_id = { props.array_image_id }
                 url_image = { props.url_image }

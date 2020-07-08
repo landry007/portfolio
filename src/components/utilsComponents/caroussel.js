@@ -20,48 +20,61 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
 const useStyles = makeStyles(theme => ({
   root: {
-    display :'flex',
-    flex : 1,
+    display: 'flex',
+    flex: 1,
     flexDirection: 'column',
   },
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: 50,
+    height: 20,
     paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    width : 'auto',
-    height :'auto',
-    display :'flex',
-    flex:1 ,
-    background :'no-repeat',
-    backgroundSize :theme.props.size ,
+    width: 'inherit',
+    height: 'inherit',
+    display: 'flex',
+    flex: 1,
+    background: 'no-repeat',
+    // backgroundSize: theme.props.size,
     overflow: 'hidden',
-    borderRadius: 20,
-    marginLeft: 1,
+    marginTop: 46,
+
   },
 }));
 
-function SwipeableTextMobileStepper( props ) {
+function SwipeableTextMobileStepper(props) {
   const classes = useStyles()
-  const [tutorialSteps , setTutorialSteps] = React.useState([])
+  const [tutorialSteps, setTutorialSteps] = React.useState([])
   const theme = useTheme()
   const [activeStep, setActiveStep] = React.useState(0)
-  const maxSteps = tutorialSteps.length 
+  const maxSteps = tutorialSteps.length
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
 
-    props.array_image_id.map( id =>{
+    props.array_image_id.map(id => {
 
-        storageRoot.child(`images/${props._id }/${ id }.png` ).getDownloadURL().then( url =>{
+      storageRoot.child(`images/${props._id}/${id}.png`).getDownloadURL().then(url => {
 
-            setTutorialSteps( prevTutos => prevTutos.concat([url]))
-          })
+        setTutorialSteps(prevTutos => prevTutos.concat([url]))
+      }).catch(function (error) {
+
+        // A full list of error codes is available at
+        // https://firebase.google.com/docs/storage/web/handle-errors
+        switch (error.code) {
+          case 'storage/object-not-found':
+            storageRoot.child(`images/${props._id}/${id}.jpg`).getDownloadURL().then(url => {
+              setTutorialSteps(prevTutos => prevTutos.concat([url]))
+            })
+
+            break;
+        }
+      });
+
     })
-        
-  },[props.array_image_id])
+
+  }, [props.array_image_id])
 
   function handleNext() {
     setActiveStep(prevActiveStep => prevActiveStep + 1)
@@ -78,7 +91,7 @@ function SwipeableTextMobileStepper( props ) {
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
-        <Typography>{ tutorialSteps[activeStep] }</Typography>
+        {/* <Typography>{ tutorialSteps[activeStep] }</Typography> */}
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -87,11 +100,11 @@ function SwipeableTextMobileStepper( props ) {
         enableMouseEvents
       >
         {tutorialSteps.map((step, index) => (
-          <div key={ index }>
+          <>
             {Math.abs(activeStep - index) <= 2 ? (
-              <img className={classes.img} src={ step } alt={ index } />
+              <img className={classes.img} src={step} alt={index} />
             ) : null}
-          </div>
+          </>
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper

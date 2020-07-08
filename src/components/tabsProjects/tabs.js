@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography'
 import ProjectGroup from '../projectGroup/projectGroup'
 import './tabs.css'
 
- let data = ['HTML5 / CSS3','REACTjs / REACT Native','ANGULAR','VUEJS','NODES JS & EXPRESS JS','PHP','PYTHON','AUTRES']
+ let data = ['HTML5 / CSS3','REACTJS / REACT NATIVE','ANGULAR/ VUEJS/ IONIC','DART/ FLUTTER','NODES JS & EXPRESS JS','PHP','PYTHON','UIs','AUTRES']
 
 function TabContainer({ children, dir }) {
   return (

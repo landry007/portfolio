@@ -70,8 +70,10 @@ export default function ProjectImtem(props) {
       // https://firebase.google.com/docs/storage/web/handle-errors
       switch (error.code) {
         case 'storage/object-not-found':
-          // File doesn't exist
           console.log('// File doesn\'t exist');
+          storageRoot.child(`images/${props.project.id}/${ props.project.get('images_id')[0] }.jpg` ).getDownloadURL().then( url =>{
+            setUrl_image(url)
+          })
           
           break;
     
@@ -109,7 +111,7 @@ export default function ProjectImtem(props) {
             </IconButton>
           }
           title={ props.title }
-          subheader="September 14, 2016"
+          // subheader="September 14, 2016"
         />
         <CardMedia
           className={classes.media}
@@ -122,9 +124,9 @@ export default function ProjectImtem(props) {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="Add to favorites">
+          {/* <IconButton aria-label="Add to favorites">
             <FavoriteIcon />
-          </IconButton>
+          </IconButton> */}
           <a  href= { props.project.get('github_url') } target="_blank" >
           <IconButton aria-label="Share" >
             <ShareIcon   />

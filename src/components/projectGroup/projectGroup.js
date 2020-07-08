@@ -36,7 +36,7 @@ class ProjectGroup extends React.Component{
 		return(
 			<div style={{overflowX:'hidden'}} >
 
-				<div className="container" >
+				<div className="projectContainer" >
 					{ this.state.projects.filter( projet => projet.get('lang').toUpperCase() == this.props.title).map( project =>{
 					return( 
 

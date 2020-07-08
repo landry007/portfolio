@@ -7,10 +7,6 @@ import  Contact from "./components/contact/contact"
 
 import  About from "./components/about/about"
 
-import './App.css'
-
-
-
 class App extends React.Component {
 
   render(){

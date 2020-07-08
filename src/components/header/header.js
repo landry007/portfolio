@@ -146,14 +146,14 @@ export default function PersistentDrawerLeft() {
         <List>
           {['Projects', 'Mes Competences', 'A Propos', 'Contactez-moi'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon  /> : <MailIcon />}</ListItemIcon>
                 <Link to ={ text.replace(' ','-').toLocaleLowerCase() } >  <ListItemText primary={text} /> </Link>
             </ListItem>
           ))}
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          {['Coming Soon'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />

@@ -1,13 +1,13 @@
-.container{
+.projectContainer{
 	overflow: hidden;
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 14px;
 }
 
-@media screen AND (max-width: 420px){
+@media screen AND (max-width: 480px){
 
-	.container{
+	.projectContainer{
 		overflow: hidden;
 		display: grid;
 	    grid-template-columns: 1fr ;
@@ -16,9 +16,9 @@
 	
 }
 
-@media screen AND (max-width: 800px ) AND (min-width: 421px) {
+@media screen AND (max-width: 950px ) AND (min-width: 481px) {
 
-	.container{
+	.projectContainer{
 		overflow: hidden;
 		display: grid;
 	    grid-template-columns: 1fr 1fr ;
@@ -27,9 +27,9 @@
 	
 }
 
-@media screen AND (max-width: 1000px ) AND (min-width: 800px) {
+@media screen AND (max-width: 1000px ) AND (min-width: 980px) {
 
-	.container{
+	.projectContainer{
 		overflow: hidden;
 		display: grid;
 	    grid-template-columns: 1fr 1fr 1fr ;
